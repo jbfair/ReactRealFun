@@ -1,0 +1,9 @@
+.h1 {
+  font-family: fantasy;
+  font-weight: 900;
+}
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
