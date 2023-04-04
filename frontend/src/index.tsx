@@ -3,15 +3,28 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap-grid.min.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/home';
+import Podcasts from './pages/podcasts';
+import MovieList from './pages/movieCollection';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <>
+    <React.StrictMode>
+      <BrowserRouter>
+        <App />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/podcasts" element={<Podcasts />} />
+          <Route path="/movies" element={<MovieList />} />
+        </Routes>
+      </BrowserRouter>
+    </React.StrictMode>
+  </>,
 );
 
 // If you want to start measuring performance in your app, pass a function

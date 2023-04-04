@@ -1,15 +1,11 @@
 import React from 'react';
 import './App.css';
-import TopBanner from './header';
-import MovieList from './movies';
+import NavMenu from './components/NavMenu';
 
 function App() {
   return (
-    <div className="App">
-      <div>
-        <TopBanner title="Joel Hilton Movies!" />
-        <MovieList />
-      </div>
+    <div>
+      <NavMenu />
     </div>
   );
 }
